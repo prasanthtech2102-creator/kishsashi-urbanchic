@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-luxury-green: #072F22;
+  --color-luxury-lightgreen: #0D4733;
+  --color-luxury-gold: #C5A85C;
+  --color-luxury-gold-light: #E2CC91;
+  --color-luxury-gold-dark: #9F823C;
+  --color-luxury-sand: #FBF9F4;
+  --color-luxury-charcoal: #121212;
+}
+
+/* Custom styles */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-luxury-sand);
+  color: var(--color-luxury-charcoal);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Base headings default */
+.font-luxury-title {
+  font-family: var(--font-serif);
+}
+
+/* Zoom effect utilities */
+.zoom-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.zoom-image {
+  transition: transform 0.5s ease;
+}
+
+.zoom-container:hover .zoom-image {
+  transform: scale(1.15);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C5A85C;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9F823C;
+}
